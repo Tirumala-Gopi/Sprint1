@@ -1,0 +1,108 @@
+package Account_and_customer_management;
+
+import java.util.ArrayList;
+
+public  class AccountController {
+
+	public AccountController() {
+		super();
+		this.customers = new ArrayList();
+		this.accounts = new ArrayList();
+	}
+	private ArrayList<Customer>customers;
+	private ArrayList<Account>accounts;
+	public ArrayList<Customer> getCustomers() {
+		return customers;
+	}
+	public void setCustomers(ArrayList<Customer> customers) {
+		this.customers = customers;
+	}
+	public ArrayList<Account> getAccounts() {
+		return accounts;
+	}
+	public void setAccounts(ArrayList<Account> accounts) {
+		this.accounts = accounts;
+	}
+	
+	public Customer createCustomer(String name,String address,String type)
+	{
+		
+		if (type=="person")
+			{Person person=new Person(name,address);
+
+			customers.add(person);
+			return person;
+		
+		
+	}
+		if (type=="company")
+		{
+			Company company=new Company(name,address);
+			customers.add(company);
+			return company;
+		}
+		return null;
+	
+}
+	
+	public Account createAccount(Customer customer,String type)
+	{
+		if(type=="checking")
+		{
+			CheckingAccount newchecking=new CheckingAccount();
+					accounts.add(newchecking);
+					customer.addAccount(newchecking);
+					return newchecking;
+		}
+		if (type=="savings")
+		{
+			SavingsAccount newsaving=new SavingsAccount();
+				accounts.add(newsaving);
+					customer.addAccount(newsaving);
+					return newsaving;
+		}
+		return null;
+		
+	}
+	
+	public void removeCustomer(Customer customer)
+	{
+		
+		customers.remove(customer);
+		for(int i=0;i<customers.size();i++)
+		{
+			
+			if(customers.get(i).getCUSTOMER_ID()==customer.getCUSTOMER_ID())
+			{
+				ArrayList<Account>acounts=customers.get(i).getAccounts();
+				for(int j=0;j<accounts.size();j++)
+				{
+					customers.get(i).removeAccount(accounts.get(j));
+				}
+			}
+				
+				
+		}
+		
+	}
+	public void removeAccount(Account account)
+	{
+		
+		System.out.println("Ëntered into remove function");
+		System.out.println("before removing "+this.customers);
+		
+		accounts.remove(account);
+		for(int i=0;i<customers.size();i++)
+		{
+			System.out.println(customers.get(i));
+			ArrayList<Account>acounts=customers.get(i).getAccounts();
+			System.out.println(accounts+customers.get(i).getName());
+			for (int j=0;j<accounts.size();j++)
+			{
+				accounts.get(j).getACCOUNT_ID();
+				if(accounts.get(j).getACCOUNT_ID()==account.getACCOUNT_ID())
+					customers.get(i).removeAccount(account);
+			}
+		}
+	}
+}

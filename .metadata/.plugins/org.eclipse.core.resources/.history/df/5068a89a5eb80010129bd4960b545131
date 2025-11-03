@@ -1,0 +1,23 @@
+package Package1;
+
+public class Runner {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		RentalController controller=new RentalController();
+		Customer corporateCustomer=controller.createCustomer("harshitha", "LiscenceNumber", "corporate");
+		
+		Car car=controller.createVehicle("car", "make", "model", 20.0, 4,false);
+		
+		Truck truck=controller.createVehicle("truck","make", "model", 20.0, 4);
+		corporateCustomer.addVehicle(truck);
+		
+		System.out.println(corporateCustomer.getRentedVehicles());
+		
+		
+		
+
+	}
+
+}

@@ -1,0 +1,15 @@
+package dependenciesExercise2;
+
+public class Runner {
+
+	SmartDevice device1=new SmartDevice("apple",24.0);
+	SmartDevice device2=new SmartDevice("samsung",33.0);
+	
+	Employee first=new Employee("ramesh",118);
+	Employee second=new Employee("suresh",119);
+	first.usedevice( device1);
+//	usedevice second=new usedevice(SmartDevice device2);
+	
+	PowerUnit ps=new PowerUnit(2.4);
+	
+}

@@ -1,0 +1,13 @@
+package com.fdmgroup.inheritanceExercise;
+
+import java.util.ArrayList;
+
+public class UserAccountManager {
+
+	private ArrayList<UserAccount>userAccounts=new ArrayList<>();
+	
+	
+	
+	
+	
+}

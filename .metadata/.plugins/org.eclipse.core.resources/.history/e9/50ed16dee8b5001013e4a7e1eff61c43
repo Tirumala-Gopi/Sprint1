@@ -1,0 +1,18 @@
+package com.fdmgroup.staticKeywordExercise;
+
+public class EnergyMatterCalculator {
+	public static double SPEED_OF_LIGHT=299792458;
+	
+	
+	public static double matterToEnergy(double matter)
+	{
+		double mass;
+		double M=mass;
+		double C=EnergyMatterCalculator.SPEED_OF_LIGHT;
+		double  E=(M*(C*C));
+	
+	}
+	return E
+	
+
+}

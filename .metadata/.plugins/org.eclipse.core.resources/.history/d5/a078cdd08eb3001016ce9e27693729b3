@@ -1,0 +1,33 @@
+package dependenciesExercise2;
+
+import java.util.ArrayList;
+
+public class Runner {
+
+	public static void main(String[] args){
+	SmartDevice device1=new SmartDevice("apple",24.0);
+	SmartDevice device2=new SmartDevice("samsung",33.0);
+	
+	
+	Employee first=new Employee("ramesh",118);
+	Employee second=new Employee("suresh",119);
+	
+	first.usedevice(device1);
+	second.usedevice(device2);
+	
+	
+
+	PowerUnit ps=new PowerUnit(2.4);
+	SmartDevice device3=new SmartDevice("lenovo",ps.getWatts());
+	
+	ArrayList<SmartDevice> devices=new ArrayList<>();
+	devices.add(device1);
+	devices.add(device2);
+	
+	OfficeRoom room1=new OfficeRoom("USA",devices);
+	ArrayList<OfficeRoom> rooms=new ArrayList<>();
+	rooms.add(room1);
+	SmartOffice room2=new SmartOffice("japan",rooms);
+	
+}
+}

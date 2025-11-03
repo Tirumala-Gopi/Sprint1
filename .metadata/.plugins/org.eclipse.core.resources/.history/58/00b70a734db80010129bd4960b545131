@@ -1,0 +1,58 @@
+package Package1;
+
+
+public abstract class Vehicle {
+    private static int nextVehicleId = 800;
+    private final int VEHICLE_ID;
+    private String model;
+    private boolean available;
+    private double dailyRate;
+
+    public Vehicle(String model, double dailyRate) {
+        this.VEHICLE_ID = nextVehicleId;
+        nextVehicleId += 5;
+        this.model = model;
+        this.dailyRate = dailyRate;
+        this.available = true;
+    }
+
+    // Methods
+    public void rentOut() {
+        this.available = false;
+    }
+
+    public void returnVehicle() {
+        this.available = true;
+    }
+
+    // Getters and Setters
+    public int getVEHICLE_ID() {
+        return VEHICLE_ID;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public boolean isAvailable() {
+        return available;
+    }
+
+    public double getDailyRate() {
+        return dailyRate;
+    }
+
+    public void setDailyRate(double dailyRate) {
+        this.dailyRate = dailyRate;
+    }
+
+    @Override
+    public String toString() {
+        return "Vehicle ID: " + VEHICLE_ID + ", Model: " + model +
+                ", Daily Rate: $" + dailyRate + ", Available: " + available;
+    }
+}

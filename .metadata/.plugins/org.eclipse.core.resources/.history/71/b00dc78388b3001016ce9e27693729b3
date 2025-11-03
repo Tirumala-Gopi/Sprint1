@@ -1,0 +1,9 @@
+package dependenciesExercise2;
+
+public class Runner {
+
+	SmartDevice device1=new SmartDevice("apple",24.0);
+	SmartDevice device2=new SmartDevice("samsung",33.0);
+	
+	
+}

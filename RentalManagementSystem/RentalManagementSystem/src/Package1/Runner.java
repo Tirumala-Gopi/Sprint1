@@ -1,0 +1,24 @@
+package Package1;
+
+public class Runner {
+
+	public static void main(String[] args) {
+		
+		
+		RentalController controller=new RentalController();
+		Customer corporateCustomer=controller.createCustomer("harshitha", "LiscenceNumber", "corporate");
+		
+		Car car=controller.createVehicle("car", "make", "model", 20.0, 4,false);
+		
+		Truck truck=controller.createVehicle("truck","make", "model", 20.0, 4);
+		controller.rentVehicle(corporateCustomer, truck, 1);
+		System.out.println(controller.getRentals());
+		
+		controller.returnVehicle(corporateCustomer, truck);
+		
+		System.out.println(controller.getRentals());
+		
+
+	}
+
+}

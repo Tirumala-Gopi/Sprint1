@@ -1,0 +1,61 @@
+package LibrarySystem;
+
+public class Member {
+
+
+	    // Private attributes
+	    private String name;
+	    private int memberId;
+	    private int borrowedBooks;
+
+	    // Constructor
+	    public Member(String name, int memberId, int borrowedBooks) {
+	        this.name = name;
+	        this.memberId = memberId;
+	        this.borrowedBooks = borrowedBooks;
+	    }
+
+	    // Getters & Setters
+	    public String getName() {
+	        return name;
+	    }
+
+	    public void setName(String name) {
+	        this.name = name;
+	    }
+
+	    public int getMemberId() {
+	        return memberId;
+	    }
+
+	    public void setMemberId(int memberId) {
+	        this.memberId = memberId;
+	    }
+
+	    public int getBorrowedBooks() {
+	        return borrowedBooks;
+	    }
+
+	    public void setBorrowedBooks(int borrowedBooks) {
+	        this.borrowedBooks = borrowedBooks;
+	    }
+
+	    // Methods
+	    public void borrow() {
+	        System.out.println(name + " borrowed a book");
+	        borrowedBooks++;
+	    }
+
+	    public void returnBook() {
+	        if (borrowedBooks > 0) {
+	            System.out.println(name + " returned a book");
+	            borrowedBooks--;
+	        }
+	    }
+
+	    public String getInfo() {
+	        return "Member: " + name + ", ID: " + memberId + ", Borrowed books: " + borrowedBooks;
+	    }
+	}
+
+

@@ -1,0 +1,11 @@
+package Library_and_Member_ManagementSystem;
+
+public abstract class Book {
+	
+	private long BOOK_ID;
+	static long nextBookId=5000;
+	private String title;
+	private String author;
+	private boolean borrowed;
+
+}

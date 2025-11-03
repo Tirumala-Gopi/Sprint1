@@ -1,0 +1,7 @@
+package Library_and_Member_ManagementSystem;
+
+public abstract class Book {
+	
+	
+
+}

@@ -1,0 +1,66 @@
+package Library_and_Member_ManagementSystem;
+
+public abstract class Book {
+	
+	private long BOOK_ID;
+	static long nextBookId=5000;
+	private String title;
+	private String author;
+	private boolean borrowed;
+	
+	
+	public long getBOOK_ID() {
+		return BOOK_ID;
+	}
+	public void setBOOK_ID(long bOOK_ID) {
+		BOOK_ID = bOOK_ID;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getAuthor() {
+		return author;
+	}
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+	public boolean isBorrowed() {
+		return borrowed;
+	}
+	public void setBorrowed(boolean borrowed) {
+		this.borrowed = borrowed;
+	}
+	@Override
+	public String toString() {
+		return "Book [BOOK_ID=" + BOOK_ID + ", title=" + title + ", author=" + author + ", borrowed=" + borrowed + "]";
+	}
+	public Book(String title, String author) {
+		super();
+		System.out.println("Book created");
+		BOOK_ID =nextBookId;
+		nextBookId=BOOK_ID+4;
+		this.title = title;
+		this.author = author;
+		this.borrowed = false;
+	}
+	
+	public Book(String title, String author) {
+		super();
+		this.title = title;
+		this.author = author;
+	}
+	public void borrow()
+	{
+		this.borrowed=true;
+		
+	}
+	public void returnBook()
+	{
+		this.borrowed=false;
+	}
+	
+
+}

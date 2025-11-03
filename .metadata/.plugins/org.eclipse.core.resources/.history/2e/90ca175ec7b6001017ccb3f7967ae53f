@@ -1,0 +1,34 @@
+package manage_Students_and_Course_Enrollments;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Runner {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Course sub1=new Course("telugu");
+		Course sub2=new Course("hindi");
+		sub1.addgrade(10.0);
+		sub1.addgrade(10.0);
+		
+		sub2.addgrade(10.0);
+		sub2.addgrade(10.0);
+		
+		Student s1=new Student("harshitha",17);
+		s1.enrollCourse(sub1);
+		s1.enrollCourse(sub2);
+		
+		
+		System.out.println(s1.getAverageGrade("telugu"));
+		
+		OnlineCourse sub=new OnlineCourse("english","zoom");
+		s1.enrollCourse(sub);
+		
+	s1.getCourses();
+		
+	}
+
+}

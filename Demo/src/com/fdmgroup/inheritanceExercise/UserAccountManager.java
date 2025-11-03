@@ -1,0 +1,46 @@
+package com.fdmgroup.inheritanceExercise;
+
+import java.util.ArrayList;
+
+public class UserAccountManager {
+
+	private ArrayList<UserAccount>userAccounts=new ArrayList<>();
+
+	public UserAccountManager(ArrayList<UserAccount> userAccounts) {
+		super();
+		this.userAccounts = userAccounts;
+	}
+
+	@Override
+	public String toString() {
+		return "UserAccountManager [userAccounts=" + userAccounts + "]";
+	}
+	
+	public void adduser(UserAccount user)
+	{
+		userAccounts.add(user);
+	}
+	
+	public boolean login(String username, String password)
+	{
+		
+		boolean matchFound=false;
+		int i=0;
+		for(;i<userAccounts.size();) {
+			UserAccount tempUser=userAccounts.get(i);
+			if(tempUser.getUsername()==username && tempUser.getPassword()
+==password)
+				matchFound=true;
+				break;
+			}
+		if(matchFound) {
+			return true;
+		}
+		else
+			return false;
+	
+	}
+	
+	
+	
+}

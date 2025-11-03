@@ -1,0 +1,33 @@
+package Account_and_customer_management;
+
+public class Runner {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		AccountController controller=new AccountController();
+		Customer harshitha=controller.createCustomer("Harshitga","On", "person");
+		Account a1=controller.createAccount(harshitha,"savings" );
+		a1.setBalance(23.5);
+
+		Customer gopi=controller.createCustomer("gopi","On", "company");
+		Account a2=controller.createAccount(gopi,"savings" );
+		a2.setBalance(20.0);
+		Account a3=controller.createAccount(gopi,"checking" );
+		a3.setBalance(40.0);
+		
+		
+		System.out.println(gopi);
+		System.out.println(harshitha);
+		System.out.println(controller.getCustomers());
+		
+		
+		controller.removeAccount(a3);
+		System.out.println("------------------------------------------------------");
+		System.out.println("removed");
+		System.out.println(gopi);
+		System.out.println(controller.getAccounts());
+	
+		
+	}
+
+}

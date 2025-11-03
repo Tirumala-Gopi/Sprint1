@@ -1,0 +1,14 @@
+package Library_and_Member_ManagementSystem;
+
+import java.util.ArrayList;
+
+public abstract class Member {
+	private long MEMBER_ID;
+	static long nextMemberId=1000;
+	private String name;
+	private String email;
+	private double balance;
+	private ArrayList<Book>borrowedBooks;
+	
+
+}

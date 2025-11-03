@@ -1,0 +1,22 @@
+package com.fdmgroup.inheritanceExercise;
+
+public class Runner {
+
+	public static void main(String[] args) {
+		
+		AdminUser au1=new AdminUser("suresh","suresh123","sureshS");
+		AdminUser au2=new AdminUser("ramesh","ramesh123","rameshR");
+		
+		Customer c1=new Customer("parvesh","parvesh123","parveshP");
+		Customer c2=new Customer("naresh","naresh123","nareshN");
+		
+		System.out.println(au1);
+		System.out.println(au2);
+		System.out.println(c1);
+		System.out.println(c2);
+		au1.changePassword("g", "g");
+		c1.changePassword("c", "d");
+
+	}
+
+}

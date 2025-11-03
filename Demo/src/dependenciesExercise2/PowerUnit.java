@@ -1,0 +1,29 @@
+package dependenciesExercise2;
+
+public class PowerUnit {
+
+	private double watts;
+
+	public double getWatts() {
+		return watts;
+	}
+
+	public void setWatts(double watts) {
+		this.watts = watts;
+	}
+
+	public PowerUnit(double watts) {
+		super();
+		this.watts = watts;
+	}
+
+	@Override
+	public String toString() {
+		return "PowerUnit [watts=" + watts + "]";
+	}
+	
+	public double supplyPower()
+	{
+		return watts;
+	}
+}

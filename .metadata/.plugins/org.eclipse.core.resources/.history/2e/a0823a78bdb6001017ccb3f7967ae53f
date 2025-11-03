@@ -1,0 +1,62 @@
+package manage_Students_and_Course_Enrollments;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Course {
+
+	
+	private int courseId;
+	private String courseName;
+	private ArrayList<Double>grades;
+	public int getCourseId() {
+		return courseId;
+	}
+	public void setCourseId(int courseId) {
+		this.courseId = courseId;
+	}
+	public String getCourseName() {
+		return courseName;
+	}
+	public void setCourseName(String courseName) {
+		this.courseName = courseName;
+	}
+	public List<Double> getGrades() {
+		return grades;
+	}
+	public void setGrades(List<Double> grades) {
+		this.grades = grades;
+	}
+	@Override
+	public String toString() {
+		return "Course [courseId=" + courseId + ", courseName=" + courseName + ", grades=" + grades + "]";
+	}
+	public Course(String courseName) {
+		super();
+		this.courseName = courseName;
+	}
+	public Course(List<Double> grades) {
+		super();
+		this.grades = grades;
+	}
+	public Course(int courseId) {
+		super();
+		this.courseId =500;
+		int nextcourseId;
+			nextcourseId=courseId+3;
+	}
+		public void addgrade(double grade)
+		{
+			grades.add(grade);
+			
+		}
+		public double getHighestGrade()
+		{
+			grades.;
+		}
+	
+	
+	
+	
+	
+}

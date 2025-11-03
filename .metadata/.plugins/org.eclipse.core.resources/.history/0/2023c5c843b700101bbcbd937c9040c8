@@ -1,0 +1,21 @@
+package Account_and_customer_management;
+
+public class SavingsAccount extends Account{
+
+	public SavingsAccount(long aCCOUNT_ID, double balance) {
+		super(aCCOUNT_ID, balance);
+		// TODO Auto-generated constructor stub
+	}
+	
+	private double intersetrate;
+
+	public double getIntersetrate() {
+		return intersetrate;
+	}
+
+	public void setIntersetrate(double intersetrate) {
+		this.intersetrate = intersetrate;
+	}
+	
+
+}

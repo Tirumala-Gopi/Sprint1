@@ -1,0 +1,72 @@
+package Account_and_customer_management;
+
+import java.util.ArrayList;
+
+public abstract class AccountController {
+
+	private ArrayList<Customer>customers;
+	private ArrayList<Account>accounts;
+	public ArrayList<Customer> getCustomers() {
+		return customers;
+	}
+	public void setCustomers(ArrayList<Customer> customers) {
+		this.customers = customers;
+	}
+	public ArrayList<Account> getAccounts() {
+		return accounts;
+	}
+	public void setAccounts(ArrayList<Account> accounts) {
+		this.accounts = accounts;
+	}
+	
+	public Customer createCustomer(String name,String address,String type)
+	{
+		
+		if (type=="person")
+			{Person person=new Person(name,address);
+
+			customers.add(person);
+			return person;
+		
+		
+	}
+		if (type=="company")
+		{
+			Company company=new Company(name,address);
+			customers.add(company);
+			return company;
+		}
+		return null;
+	
+}
+	
+	public Account createAccount(Customer customer,String type)
+	{
+		if(type=="checking")
+		{
+			CheckingAccount newchecking=new CheckingAccount();
+					accounts.add(newchecking);
+					customer.addAccount(newchecking);
+		}
+		if (type=="savings")
+		{
+			SavingsAccount newsaving=new SavingsAccount();
+				accounts.add(newsaving);
+					customer.addAccount(newsaving);
+		}
+		return null;
+		
+	}
+	
+	public void removeCustomer(Customer customer)
+	{
+		accounts.remove(customer);
+		customers.remove(customer);
+		
+	}
+	public void removeAccount(Account account)
+	{
+		accounts.remove(account);
+		customers.remove(account);
+	}
+}

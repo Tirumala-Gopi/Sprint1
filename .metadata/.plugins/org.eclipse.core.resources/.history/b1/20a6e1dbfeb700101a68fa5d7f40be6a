@@ -1,0 +1,10 @@
+package Library_and_Member_ManagementSystem;
+
+public class PrintedBook extends Book {
+
+	public PrintedBook(String title, String author, boolean borrowed) {
+		super(title, author, borrowed);
+		// TODO Auto-generated constructor stub
+	}
+
+}

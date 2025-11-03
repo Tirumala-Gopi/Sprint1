@@ -1,0 +1,32 @@
+package Account_and_customer_management;
+
+import java.util.ArrayList;
+
+public abstract class AccountController {
+
+	private ArrayList<Customer>customers;
+	private ArrayList<Account>accounts;
+	public ArrayList<Customer> getCustomers() {
+		return customers;
+	}
+	public void setCustomers(ArrayList<Customer> customers) {
+		this.customers = customers;
+	}
+	public ArrayList<Account> getAccounts() {
+		return accounts;
+	}
+	public void setAccounts(ArrayList<Account> accounts) {
+		this.accounts = accounts;
+	}
+	
+	public void createCustomer(String name,String address,String type)
+	{
+		
+		if (type=="person")
+			{Person person=new Person(name,address);
+//			createCustome
+			customers.add(null);
+	}
+	
+}
+}

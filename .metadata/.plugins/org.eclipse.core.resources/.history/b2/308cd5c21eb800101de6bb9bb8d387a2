@@ -1,0 +1,23 @@
+package Library_and_Member_ManagementSystem;
+
+public class Runner {
+
+	public static void main(String[] args) {
+		LibraryController controller=new LibraryController();
+		Member student=controller.createMember("student", "email@email.com", "Student");
+		System.out.println(student);
+		
+		Member student=controller.createMember("faculty", "email@email.com", "Faculty");
+		
+		System.out.println(controller.getMembers());
+		
+		Book eBook=controller.createBook("eBook", "title", "author");
+		System.out.println(eBook);
+		System.out.println(controller.getBooks());
+		
+		
+		
+		
+	}
+
+}

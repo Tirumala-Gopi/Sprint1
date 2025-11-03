@@ -1,0 +1,36 @@
+package Library_and_Member_ManagementSystem;
+
+public class Student extends Member {
+	
+	private int Class;
+
+	
+	@Override
+	public void chargePenalty(double amount) {
+		if(this instanceof Student)
+		{
+			for (int i=0;i<members.size();i++) {
+				double newBalance=members.get(i).getBalance-amount;
+				members.get(i).setBalance(newBalance);
+			}
+				
+		}
+		
+		
+	}
+
+	public Student(String name, String email, int Class) {
+		super(name, email);
+		this.Class = class1;
+	}
+
+	@Override
+	public String toString() {
+		return "Student ["+super.toString()+"Class=" + Class + "]";
+	}
+	
+	
+	
+	
+
+}

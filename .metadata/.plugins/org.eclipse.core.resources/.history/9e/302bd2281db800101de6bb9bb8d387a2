@@ -1,0 +1,10 @@
+package Library_and_Member_ManagementSystem;
+
+public class Runner {
+
+	public static void main(String[] args) {
+		LibraryController controller=new LibraryController();
+		controller.createMember("student", 10, "student");
+	}
+
+}

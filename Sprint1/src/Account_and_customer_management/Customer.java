@@ -1,0 +1,98 @@
+package Account_and_customer_management;
+
+import java.util.ArrayList;
+
+public abstract class Customer {
+
+	private long CUSTOMER_ID;
+	static long nextCustomerId=2000000;
+	private String name;
+	private String address;
+	private ArrayList<Account>accounts;
+	
+	
+	
+	public long getCUSTOMER_ID() {
+		return CUSTOMER_ID;
+	}
+	public void setCUSTOMER_ID(long cUSTOMER_ID) {
+		CUSTOMER_ID = cUSTOMER_ID;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public ArrayList<Account> getAccounts() {
+		return accounts;
+	}
+	public void setAccounts(ArrayList<Account> accounts) {
+		this.accounts = accounts;
+	}
+	
+	
+	public Customer(String name, String address) {
+		super();
+		CUSTOMER_ID = nextCustomerId;
+		nextCustomerId=CUSTOMER_ID+7;
+		this.name = name;
+		this.address = address;
+		this.accounts = new ArrayList();
+	}
+	
+	
+	@Override
+	public String toString() {
+		return "Customer [CUSTOMER_ID=" + CUSTOMER_ID + ", name=" + name + ", address=" + address + ", accounts="
+				+ accounts + "]";
+	}
+	
+	public void addAccount(Account account)
+	{
+		accounts.add(account);
+		
+		
+	}
+	public void removeAccount(Account account)
+	{
+		accounts.remove(account);
+	}
+	
+	public void chargeAllAccounts(double amount)
+	{
+		if(this instanceof Person) {
+			for(int i=0;i<accounts.size();i++) {
+				double newBalance=accounts.get(i).getBalance()-amount;
+				accounts.get(i).setBalance(newBalance);
+			}
+			
+		}
+			
+		else {
+			
+			for(int j=0;j<accounts.size();j++)
+			{
+				if(accounts.get(j) instanceof SavingsAccount) {
+					double amounts=(2*amount);
+					double newBalance=accounts.get(j).getBalance()-amounts;
+					accounts.get(j).setBalance(newBalance);
+				}else if(accounts.get(j) instanceof CheckingAccount ) {
+					double newBalance=accounts.get(j).getBalance()-amount;
+					accounts.get(j).setBalance(newBalance);
+				}
+			}
+			
+		}}
+		
+	}
+	
+	
+	
+

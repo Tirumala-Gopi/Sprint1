@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;manage_Students_and_Course_Enrollments.Stuent.java&apos; to &apos;Student.java&apos;&#x0D;&#x0A;- Original project: &apos;Student and Course Management System&apos;&#x0D;&#x0A;- Original element: &apos;manage_Students_and_Course_Enrollments.Stuent.java&apos;&#x0D;&#x0A;- Renamed element: &apos;manage_Students_and_Course_Enrollments.Student.java&apos;" description="Rename compilation unit &apos;Stuent.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;manage_Students_and_Course_Enrollments{Stuent.java" name="Student.java" references="false" stamp="1761957763212" version="1.0"/>
+</session>

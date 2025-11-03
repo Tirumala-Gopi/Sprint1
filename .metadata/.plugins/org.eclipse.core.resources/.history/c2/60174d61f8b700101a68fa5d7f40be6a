@@ -1,0 +1,16 @@
+package Library_and_Member_ManagementSystem;
+
+public class Student extends Member {
+
+	public Student(String name, String email) {
+		super(name, email);
+		
+	}
+
+	@Override
+	public void chargePenalty(double amount) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

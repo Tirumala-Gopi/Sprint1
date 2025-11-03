@@ -1,0 +1,18 @@
+package com.fdmgroup.staticKeywordExercise;
+
+public class Runner {
+
+	public static void main(String[] args) {
+//	EnergyMatterCalculator.energyToMatter(2);
+System.out.println(EnergyMatterCalculator.energyToMatter(0.0002));
+System.out.println(EnergyMatterCalculator.matterToEnergy(2.2253001121072372E-21));
+	
+	
+	
+	
+	
+	
+	
+	}
+
+}

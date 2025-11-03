@@ -1,0 +1,11 @@
+package Account_and_customer_management;
+
+import java.util.ArrayList;
+
+public class AccountController {
+
+	private ArrayList<Customer>customers;
+	private ArrayList<Account>accounts;
+	
+	
+}

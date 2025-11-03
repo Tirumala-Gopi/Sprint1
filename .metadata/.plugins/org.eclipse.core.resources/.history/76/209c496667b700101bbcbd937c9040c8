@@ -1,0 +1,29 @@
+package Account_and_customer_management;
+
+public class SavingsAccount extends Account{
+
+	public SavingsAccount(double balance) {
+		super(balance);
+		// TODO Auto-generated constructor stub
+	}
+	
+	private double interestrate;
+
+	public double getInterestrate() {
+		return interestrate;
+	}
+
+	public void setInterestrate(double interestrate) {
+		this.interestrate = interestrate;
+	}
+	
+	public void addinterest()
+	{
+		double interest_due=(balance*(interestrate/100));
+		balance=balance+interest_due;
+		System.out.println("balnace after interest "+balance);
+		
+	}
+	
+
+}

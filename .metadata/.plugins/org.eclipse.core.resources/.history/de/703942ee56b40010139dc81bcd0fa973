@@ -1,0 +1,47 @@
+package com.fdmgroup.schoolExercises;
+
+public class Teacher {
+
+	private String name;
+	private String subject;
+	private int experienceyears;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getSubject() {
+		return subject;
+	}
+	public void setSubject(String subject) {
+		this.subject = subject;
+	}
+	public int getExperienceyears() {
+		return experienceyears;
+	}
+	public void setExperienceyears(int experienceyears) {
+		this.experienceyears = experienceyears;
+	}
+	@Override
+	public String toString() {
+		return "Teacher [name=" + name + ", subject=" + subject + ", experienceyears=" + experienceyears + "]";
+	}
+	public Teacher(String name, String subject, int experienceyears) {
+		super();
+		this.name = name;
+		this.subject = subject;
+		this.experienceyears = experienceyears;
+	}
+	
+	public void teach()
+	{
+		System.out.println("Teacher "+name+" is teaching "+subject);
+	}
+	
+	public String getinfo() 
+	{
+		return ("Name:"+name+",Subject:"+subject+",Experience:"+experienceyears+" years");
+	}
+	
+}

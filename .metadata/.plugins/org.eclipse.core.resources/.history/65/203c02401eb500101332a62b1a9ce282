@@ -1,5 +1,0 @@
-package com.fdmgroup.inheritanceExercise;
-
-public abstract class UserAccount {
-
-}

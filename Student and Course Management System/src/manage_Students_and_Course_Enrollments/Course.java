@@ -53,13 +53,13 @@ public class Course {
 		}
 		public double getHighestGrade()
 		{
-			double highestGrade=Collections.max(grades);
-			return highestGrade;
+			return Collections.max(grades);
+			
 		}
 		public static boolean isValidGarde(double grade)
 		{
-			boolean result=(grade>0&&grade<100? true:false);
-			return result;
+			return (grade>0&&grade<100? true:false);
+			
 		}
 	
 	

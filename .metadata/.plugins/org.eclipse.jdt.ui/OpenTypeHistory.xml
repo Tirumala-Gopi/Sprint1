@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
     <typeInfo handle="=Student and Course Management System/src&lt;manage_Students_and_Course_Enrollments{Course.java[Course" modifiers="1" timestamp="1762824582143"/>
+    <typeInfo handle="=threading/C:\/Program Files\/Java\/jdk-21\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/21\/docs\/api\/=/=/module=/true=/&lt;java.lang(Runnable.class[Runnable" modifiers="1537" timestamp="1761086494697"/>
+    <typeInfo handle="=threading/src&lt;com.fdmgroup.threadingExercises{ThreadManager.java[ThreadManager" modifiers="1" timestamp="1763252970804"/>
+    <typeInfo handle="=threading/C:\/Program Files\/Java\/jdk-21\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/21\/docs\/api\/=/=/module=/true=/&lt;java.lang(Thread.class[Thread" modifiers="33" timestamp="1761086494697"/>
 </typeInfoHistroy>
